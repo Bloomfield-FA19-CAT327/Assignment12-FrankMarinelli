@@ -12,4 +12,9 @@ public class Bullet : NetworkBehaviour
     {
         gameObject.GetComponent<Renderer>().material.color = color;
     }
+
+    void OnTriggerEnter(Collider other)
+    {
+        Destroy(other.gameObject);
+    }
 }
