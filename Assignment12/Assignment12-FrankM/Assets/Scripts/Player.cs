@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using Mirror;
+using UnityEngine.UI;
 
 public class Player : NetworkBehaviour
 {
@@ -11,16 +12,21 @@ public class Player : NetworkBehaviour
     [SyncVar]
     public int score;
 
+
+    private Text scoreText;
+
     public override void OnStartClient()
     {
         gameObject.GetComponent<Renderer>().material.color = color;
+        scoreText = GameObject.Find("ScoreText").GetComponent<Text>();
     }
 
     void Update()
     {
-        if (isLocalPlayer)
+        if (isLocalPlayer && hasAuthority)
         {
             GetInput();
+            scoreText.text = "Score: " + score;
         }
     }
 
