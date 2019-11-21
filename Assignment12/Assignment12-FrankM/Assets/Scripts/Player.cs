@@ -6,7 +6,11 @@ public class Player : NetworkBehaviour
 {
     [SyncVar]
     public Color color;
+
+    [SyncVar]
     public float moveSpeed = 1.875f;
+
+    [SyncVar]
     public GameObject bulletPrefab;
 
     [SyncVar]

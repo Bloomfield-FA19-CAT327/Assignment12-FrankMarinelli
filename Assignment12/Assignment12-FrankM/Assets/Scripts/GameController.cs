@@ -10,6 +10,9 @@ public class GameController : NetworkBehaviour
 
     private float spawnEnemyTime = 0;
 
+  
+
+
     void Update() //we only want a server to handle this!
     {
         if (isServer)
@@ -29,4 +32,6 @@ public class GameController : NetworkBehaviour
         NetworkServer.Spawn(enemy);
         spawnEnemyTime = Time.fixedTime + Random.Range(3, 8);
     }
+
+
 }

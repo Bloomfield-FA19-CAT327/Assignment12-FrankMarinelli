@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 6811547799559942231}
   m_Layer: 0
   m_Name: Bullet
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -125,8 +125,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   serverOnly: 0
-  m_AssetId: 
-  m_SceneId: 1599165876
+  m_AssetId: 79007da2f5d3449528262e8b7ff96580
+  m_SceneId: 0
 --- !u!114 &6263165374773709047
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -157,3 +157,4 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0.1
   color: {r: 0, g: 0, b: 0, a: 0}
+  parentNetId: 0
