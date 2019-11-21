@@ -16,6 +16,8 @@ public class Player : NetworkBehaviour
     [SyncVar]
     public int score;
 
+    [SyncVar]
+    public float playerHealth = 50f;
 
     private Text scoreText;
 
@@ -73,6 +75,7 @@ public class Player : NetworkBehaviour
         Destroy(bullet, 0.875f);
         NetworkServer.Spawn(bullet);
     }
+    
 
 
 }
