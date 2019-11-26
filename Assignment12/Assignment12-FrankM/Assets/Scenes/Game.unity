@@ -170,6 +170,7 @@ MonoBehaviour:
     type: 3}
   bulletPrefab: {fileID: 8981328377150012030, guid: 79007da2f5d3449528262e8b7ff96580,
     type: 3}
+  rb: {fileID: 0}
 --- !u!114 &357538299
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -19,7 +19,16 @@ public class Player : NetworkBehaviour
     [SyncVar]
     public float playerHealth = 50f;
 
+    [SyncVar]
+    public AudioSource audioPlayerFire;
+
     private Text scoreText;
+
+    void Start()
+    {
+        audioPlayerFire = GetComponent<AudioSource>();
+        audioPlayerFire.Play(0);
+    }
 
     public override void OnStartClient()
     {
@@ -75,7 +84,15 @@ public class Player : NetworkBehaviour
         Destroy(bullet, 0.875f);
         NetworkServer.Spawn(bullet);
     }
-    
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (GameObject.FindGameObjectWithTag("Bullet"))
+        {
+            playerHealth--;
+        }
+    }
+
 
 
 }

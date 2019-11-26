@@ -13,6 +13,8 @@ public class Bullet : NetworkBehaviour
 
     
 
+    
+
     public override void OnStartClient()
     {
         gameObject.GetComponent<Renderer>().material.color = color;
@@ -26,6 +28,9 @@ public class Bullet : NetworkBehaviour
             player.score += 150;
             Destroy(other.gameObject);
            
+        } else
+        {
+            Destroy(GameObject.FindGameObjectWithTag("Player"));
         }
     }
 }

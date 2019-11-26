@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 4130972820869958160}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -109,8 +109,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   serverOnly: 0
-  m_AssetId: 61eea0bcabf0945d68d63283763838dd
-  m_SceneId: 0
+  m_AssetId: 
+  m_SceneId: 24663377
 --- !u!114 &5712751268936039402
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -131,6 +131,7 @@ MonoBehaviour:
     type: 3}
   score: 0
   playerHealth: 50
+  audioPlayerFire: {fileID: 0}
 --- !u!82 &4130972820869958160
 AudioSource:
   m_ObjectHideFlags: 0
